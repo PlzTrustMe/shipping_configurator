@@ -1,26 +1,51 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import TariffZones from "@/components/TariffZones.vue";
+import AddedZones from "@/components/AddedZones.vue";
 </script>
 
+<template>
+  <div class="wrapper">
+    <TariffZones />
+    <AddedZones />
+  </div>
+</template>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 1000px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button {
+  background: #3c78d8;
+  color: white;
+  padding: 10px;
+  border-radius: 10%;
+  margin-right: 10px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.added_zone {
+  height: 100vh;
+  width: 50%;
 }
 </style>
